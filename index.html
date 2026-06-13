@@ -957,7 +957,7 @@ async function loadConfig(){
     if(snap.exists()){
       var d=snap.data();
       if(d.taux)document.getElementById('stat-taux').textContent=d.taux;
-      if(d.membres)document.getElementById('stat-membres').textContent=d.membres;
+      // stat-membres est géré par loadMembres()('stat-membres').textContent=d.membres;
       if(d.exp)document.getElementById('stat-exp').textContent=d.exp;
     }
     var snap2=await window.fbGetDoc(window.fbDoc(window.fbDb,'config','legal'));
